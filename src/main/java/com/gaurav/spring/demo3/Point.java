@@ -3,7 +3,7 @@ package com.gaurav.spring.demo3;
 public class Point {
 	
 	public Point(){
-		System.out.println("Point Constructor");
+		//System.out.println("Point Constructor");
 	}
 	
 	private int x;

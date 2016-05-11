@@ -11,7 +11,7 @@ public class DrawingApp10 {
 		//Shape shape1 = (Triangle) context.getBean("triangle");
 		//shape1.draw();
 		//context.registerShutdownHook();
-		Shape shape = (Circle) context.getBean("circle");
+		Shape shape = (Shape) context.getBean("circle");
 		shape.draw();
 		
 		/*String message = context.getMessage("greetings", null, "Default Greeting" , null);

@@ -56,7 +56,7 @@ public class LoginAspect {
 		System.out.println("Setter Called After Throwing"+ name + " Excption is : "+ ex.getMessage());
 	}
 	
-	@Around("allGetters()")
+	@Around("@annotation(com.gaurav.spring.aop.aspects.Loggable)")
 	public Object aroundAdvice(ProceedingJoinPoint proceedingJoinPoint){
 		
 		Object returnValue = null;

@@ -15,5 +15,10 @@ public class Circle {
 		this.name = name;
 		return name;
 	}
+
+	@Override
+	public String toString() {
+		return "Circle [name=" + name + "]";
+	}
 	
 }

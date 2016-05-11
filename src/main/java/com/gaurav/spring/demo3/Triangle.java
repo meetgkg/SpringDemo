@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContextAware;
 public class Triangle implements ApplicationContextAware{
 	
 	public Triangle(){
-		System.out.println("Triangle Constructor");
+		//System.out.println("Triangle Constructor");
 	}
 	
 	private Point pointA;
@@ -49,7 +49,7 @@ public class Triangle implements ApplicationContextAware{
 	}
 
 	public void setApplicationContext(ApplicationContext context) throws BeansException {
-		System.out.println("Application Context Aware Set");
+		//System.out.println("Application Context Aware Set");
 		this.context = context;
 	}
 

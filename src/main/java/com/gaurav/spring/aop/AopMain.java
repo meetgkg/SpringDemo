@@ -12,9 +12,9 @@ public class AopMain {
 		
 		ShapeService shapeService = ctx.getBean("shapeService", ShapeService.class);
 		
-		shapeService.getCircle().setName("Dummy Circle Name");
+		//shapeService.getCircle().setName("Dummy Circle Name");
 		
-		//shapeService.getCircle().setNameReturn("Dummy Circle");
+		shapeService.getCircle().setNameReturn("Dummy Circle");
 		
 		//System.out.println(shapeService.getTriangle().getName());
 

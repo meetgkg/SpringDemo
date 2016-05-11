@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byName">
+
+
+	<bean id="person" class="com.gaurav.cave.factory.Person" factory-method="getInstance">
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg value="Anamika"></constructor-arg>
+		<property value="321" name="taxId"></property>
+		<property name="address" ref="address"></property>
+	</bean>
+	
+	<bean id="person2" class="com.gaurav.cave.factory.Person" scope="singleton" factory-bean="personfactory" factory-method="createPerson">
+		<constructor-arg value="654" name="id" type="int"></constructor-arg>
+		<constructor-arg value="Mike" name="name" type="String"></constructor-arg>
+		<property value="321" name="taxId"></property>
+		<property name="address" ref="address"></property>
+	</bean>
+	
+	<bean id="address" class="com.gaurav.cave.factory.Address">
+		<constructor-arg value="1025 Hancock"></constructor-arg>
+		<constructor-arg value="02169"></constructor-arg>
+	</bean>
+	
+	<bean id="personfactory" class="com.gaurav.cave.factory.PersonFactory">
+	</bean>
+	
+	<bean id="address2" class="com.gaurav.cave.factory.Address" p:street="Post Office Sq" p:postcode="02109">
+	</bean>
+	
+	<bean id="logger" class="com.gaurav.cave.factory.Logger" autowire="constructor">
+	</bean>
+
+	<bean id="consoleWriter" class="com.gaurav.cave.factory.ConsoleWriter"></bean>
+
+	<bean id="fileWriter" class="com.gaurav.cave.factory.FileWriter"></bean>
+	
+	<bean id="fileWriter2" class="com.gaurav.cave.factory.FileWriter" autowire-candidate="false"></bean>
+	
+	<bean id="fileWriter3" class="com.gaurav.cave.factory.FileWriter" primary="false"></bean>
+
+</beans>

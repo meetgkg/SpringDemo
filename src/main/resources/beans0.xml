@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="triangle" class="com.gaurav.spring.demo0.Triangle">
+		<property name="type" value="Equi"></property>
+	</bean>
+	
+	<bean id="triangle1" class="com.gaurav.spring.demo0.Triangle">
+		<constructor-arg value="Iso" type="java.lang.String"></constructor-arg>
+	</bean>
+</beans>

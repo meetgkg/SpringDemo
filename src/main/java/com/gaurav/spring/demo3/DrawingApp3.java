@@ -11,7 +11,7 @@ public class DrawingApp3 {
 	public static void main(String[] args) {
 		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("beans.xml"));
 		ApplicationContext factory = new ClassPathXmlApplicationContext("beans3.xml");
-		System.out.println("Going to call getBean()");
+		//System.out.println("Going to call getBean()");
 		Triangle triangle = (Triangle) factory.getBean("triangle");
 		triangle.draw();
 	}
